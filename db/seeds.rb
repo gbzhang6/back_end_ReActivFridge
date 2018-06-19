@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'byebug'
+def url(name)
+    return `https://www.themealdb.com/images/ingredients/#{name}.png`
+end
+
+Ingredient.delete_all
+UserIngredient.delete_all
+
+
+User.create(name: "GBZ", email: "gbz@gmail.com", password: "gbz123")
+
+ingredients = ['lime', 'apple', 'tortilla', 'pork', 'onion', 'pepper', 'salt', 'avocado', 'pasta', 'garlic', 'cheese']
+ingredients.each {|item| 
+    Ingredient.create(name: item, imgUrl:"https://www.themealdb.com/images/ingredients/#{item}.png")
+}
+
+Ingredient.all.each {|i| UserIngredient.create(user_id:1, ingredient_id: i.id)}
