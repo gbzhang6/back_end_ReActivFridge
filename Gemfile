@@ -3,6 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
+gem 'active_model_serializers'
+
+#REST-CLIENT dependencies & Gem
+gem 'rest-client'
+gem 'mime-types'
+gem 'netrc'
+gem 'http-accept'
+gem'http-cookie'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
