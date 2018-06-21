@@ -40266,3 +40266,426 @@ Processing by Api::V1::UsersController#user_ingredients as HTML
 Completed 200 OK in 136ms (Views: 103.1ms | ActiveRecord: 11.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-21 15:41:12 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.0.0) lib/pg.rb:56:in `initialize'
+pg (1.0.0) lib/pg.rb:56:in `new'
+pg (1.0.0) lib/pg.rb:56:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-21 15:41:20 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (5.4ms)
+Completed 200 OK in 21ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 15:41:25 -0400
+Processing by Api::V1::IngredientsController#index as HTML
+  [1m[36mIngredient Load (5.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.78ms)
+Completed 200 OK in 290ms (Views: 243.4ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:41:54 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::RecipesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:42:16 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `yummlyUrl' for #<Api::V1::RecipesController:0x00007fbbe05f21e0>
+Did you mean?  yummlyURL):
+  
+app/controllers/api/v1/recipes_controller.rb:4:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:42:43 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to eggplant:80 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/application_controller.rb:6:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:4:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:43:03 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to eggplant:80 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/application_controller.rb:6:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:4:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:47:07 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (must pass :url):
+  
+app/controllers/application_controller.rb:6:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:4:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:47:30 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:49:23 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 6770ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/api/v1/recipes_controller.rb:6:in `+'
+app/controllers/api/v1/recipes_controller.rb:6:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:49:41 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:51:03 -0400
+Completed 500 Internal Server Error in 81696ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `results'
+app/controllers/api/v1/recipes_controller.rb:6:in `results'
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:51:10 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 2780ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/api/v1/recipes_controller.rb:6:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:55:17 -0400
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 15:57:27 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 15:58:50 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::IngredientsController#index as HTML
+  [1m[36mIngredient Load (7.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.31ms)
+Completed 200 OK in 250ms (Views: 189.1ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 16:00:27 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 335046ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `results'
+app/controllers/api/v1/recipes_controller.rb:8:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 16:09:48 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.17ms)
+Completed 200 OK in 30878ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 16:11:47 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 18426ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `render'
+app/controllers/api/v1/recipes_controller.rb:9:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 16:12:30 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 19885ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `results'
+app/controllers/api/v1/recipes_controller.rb:9:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 16:12:59 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `match' for #<URI::HTTP:0x00007ff330a97c68>):
+  
+app/controllers/application_controller.rb:9:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 16:20:13 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/application_controller.rb:9:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:06:06 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 416691ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:11:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:13:11 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 219701ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `rescue in process_action'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:16:56 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 36037ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `parse'
+app/controllers/application_controller.rb:13:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:18:43 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:19:21 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 93251ms (ActiveRecord: 0.0ms)
+
+
+  
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:20:55 -0400
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:21:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 2794ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:14:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:21:02 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (120.36ms)
+Completed 200 OK in 538ms (Views: 294.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 17:32:44 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (119.36ms)
+Completed 200 OK in 673ms (Views: 281.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant&tomatoes" for 127.0.0.1 at 2018-06-21 17:46:11 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant&tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (171.56ms)
+Completed 200 OK in 1444ms (Views: 383.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 17:47:04 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (160.29ms)
+Completed 200 OK in 694ms (Views: 333.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 17:55:05 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (103.24ms)
+Completed 200 OK in 783ms (Views: 299.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 17:56:26 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+Completed 500 Internal Server Error in 359136ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:02:25 -0400
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:13:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+Completed 500 Internal Server Error in 1649ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:13:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:02:35 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.05ms)
+Completed 200 OK in 9510ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+

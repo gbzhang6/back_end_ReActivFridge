@@ -8,6 +8,7 @@ gem 'active_model_serializers'
 gem 'jwt'
 gem 'dotenv-rails'
 
+
 gem 'sprockets', '~> 3.7.2'
 
 #REST-CLIENT dependencies & Gem

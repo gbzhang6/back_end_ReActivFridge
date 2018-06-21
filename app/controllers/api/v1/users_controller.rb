@@ -11,9 +11,16 @@ class Api::V1::UsersController < ApplicationController
     @user.password = params[:password]
 
     if (@user.save)
-      render json: {
+
+      payload = {
         username: @user.username,
         id: @user.id
+      }
+
+      token = JWT.encode payload, ENV['JWT_SECRET'], 'HS256'
+
+      render json: {
+        token: token
       }
     else
       render json: {
