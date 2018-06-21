@@ -40689,3 +40689,133 @@ Processing by Api::V1::RecipesController#results as HTML
 Completed 200 OK in 9510ms (Views: 19.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:35:11 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+Completed 500 Internal Server Error in 35117ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:14:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:6:in `results'
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:35:52 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.48ms)
+Completed 200 OK in 5636ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:41:11 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.38ms)
+Completed 200 OK in 5868ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:41:26 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+Completed 500 Internal Server Error in 7422ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `parse'
+app/controllers/application_controller.rb:17:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:6:in `results'
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:41:41 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+Completed 500 Internal Server Error in 66936ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:14:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:6:in `results'
+Started GET "/api/v1/recipes/eggplant%20tomatoes" for 127.0.0.1 at 2018-06-21 18:43:34 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.54ms)
+Completed 200 OK in 305ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 18:44:11 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 189ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 18:44:47 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 200 OK in 38337ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 18:45:49 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.75ms)
+Completed 200 OK in 3422ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 18:51:19 -0400
+  
+SyntaxError (/Users/MikeMyung/Development/Mod 4/back_end_ReActivFridge/app/controllers/application_controller.rb:22: syntax error, unexpected '|', expecting ')'
+...       result.matches.sort_by(|hash| hash.rating ).reverse
+...                              ^
+/Users/MikeMyung/Development/Mod 4/back_end_ReActivFridge/app/controllers/application_controller.rb:22: syntax error, unexpected ')', expecting keyword_end
+...es.sort_by(|hash| hash.rating ).reverse
+...                              ^):
+  
+app/controllers/application_controller.rb:22: syntax error, unexpected '|', expecting ')'
+app/controllers/application_controller.rb:22: syntax error, unexpected ')', expecting keyword_end
+app/controllers/api/v1/recipes_controller.rb:3:in `<main>'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 18:51:31 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.91ms)
+Completed 200 OK in 9089ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 18:51:51 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+Completed 500 Internal Server Error in 287289ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:24:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:6:in `results'
+Started GET "/api/v1/recipes/eggplant" for 127.0.0.1 at 2018-06-21 18:56:47 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"eggplant"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (13.33ms)
+Completed 200 OK in 5667ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
