@@ -5,6 +5,9 @@ ruby '2.5.0'
 
 gem 'active_model_serializers'
 
+gem 'jwt'
+gem 'dotenv-rails'
+
 #REST-CLIENT dependencies & Gem
 gem 'rest-client'
 gem 'mime-types'

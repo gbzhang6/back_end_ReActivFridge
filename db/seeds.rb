@@ -6,7 +6,7 @@ Ingredient.delete_all
 UserIngredient.delete_all
 User.delete_all
 
-User.create(name: "GBZ", email: "gbz@gmail.com", password: "gbz123")
+User.create(name: "GBZ", username:"therealGBZ", email: "gbz@gmail.com", password: "gbz123")
 #temporarily make Gui the only user
 
 def imgUrl(imgObj)
