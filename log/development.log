@@ -40819,3 +40819,328 @@ Processing by Api::V1::RecipesController#results as HTML
 Completed 200 OK in 5667ms (Views: 33.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-21 19:00:47 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (30.4ms)
+Completed 200 OK in 85ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-06-21 19:00:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ingredients"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 19:02:07 -0400
+Processing by Api::V1::IngredientsController#index as */*
+  [1m[36mIngredient Load (13.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (205.63ms)
+Completed 200 OK in 420ms (Views: 364.3ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 19:02:21 -0400
+Processing by Api::V1::IngredientsController#index as */*
+  [1m[36mIngredient Load (2.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (193.36ms)
+Completed 200 OK in 294ms (Views: 291.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/recipes/Bay%20Leaves%20Beef" for 127.0.0.1 at 2018-06-21 19:02:33 -0400
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Bay Leaves Beef"}
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `console' for #<Api::V1::RecipesController:0x00007fe21a8f0300>):
+  
+app/controllers/api/v1/recipes_controller.rb:5:in `results'
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 19:03:30 -0400
+Processing by Api::V1::IngredientsController#index as */*
+  [1m[36mIngredient Load (2.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (127.52ms)
+Completed 200 OK in 302ms (Views: 261.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/recipes/Asparagus%20Baby%20Plum%20Tomatoes" for 127.0.0.1 at 2018-06-21 19:03:38 -0400
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Asparagus Baby Plum Tomatoes"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.49ms)
+Completed 200 OK in 243ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 19:04:00 -0400
+Processing by Api::V1::IngredientsController#index as */*
+  [1m[36mIngredient Load (1.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (122.4ms)
+Completed 200 OK in 234ms (Views: 232.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/recipes/Beef%20Bay%20Leaves" for 127.0.0.1 at 2018-06-21 19:04:12 -0400
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Beef Bay Leaves"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 338ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/Beef%20Bay%20Leaves" for 127.0.0.1 at 2018-06-21 19:05:13 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Beef Bay Leaves"}
+Completed 500 Internal Server Error in 225374ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:17:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/Beef%20Bay%20Leaves" for 127.0.0.1 at 2018-06-21 19:09:19 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/MikeMyung/Development/Mod 4/back_end_ReActivFridge/app/controllers/application_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+    end
+    ^~~):
+  
+app/controllers/application_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+app/controllers/api/v1/recipes_controller.rb:3:in `<main>'
+Started GET "/ingredients" for 127.0.0.1 at 2018-06-21 19:09:30 -0400
+Started GET "/ingredients" for 127.0.0.1 at 2018-06-21 19:09:40 -0400
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 19:09:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ingredients"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/ingredients"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by Api::V1::IngredientsController#index as */*
+  [1m[36mIngredient Load (8.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (103.84ms)
+Completed 200 OK in 350ms (Views: 301.4ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-06-21 19:09:49 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/ingredients"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1ingredients" for 127.0.0.1 at 2018-06-21 19:09:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1ingredients"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 19:09:59 -0400
+Processing by Api::V1::IngredientsController#index as HTML
+  [1m[36mIngredient Load (2.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (98.97ms)
+Completed 200 OK in 267ms (Views: 216.0ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/api/v1/recipes/Bacon%20Avocado" for 127.0.0.1 at 2018-06-21 19:10:12 -0400
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Bacon Avocado"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `join' for "Bacon Avocado":String):
+  
+app/controllers/application_controller.rb:10:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/ingredients" for 127.0.0.1 at 2018-06-21 19:11:41 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::IngredientsController#index as */*
+  [1m[36mIngredient Load (6.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/controllers/api/v1/ingredients_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (291.31ms)
+Completed 200 OK in 556ms (Views: 453.2ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/api/v1/recipes/Avocado%20Bacon" for 127.0.0.1 at 2018-06-21 19:11:50 -0400
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Avocado Bacon"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `map' for "Avocado%20Bacon":String
+Did you mean?  tap):
+  
+app/controllers/application_controller.rb:11:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/Avocado%20Bacon" for 127.0.0.1 at 2018-06-21 19:12:11 -0400
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Avocado Bacon"}
+Completed 500 Internal Server Error in 83682ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `makeFetchHappen'
+app/controllers/application_controller.rb:26:in `makeFetchHappen'
+app/controllers/api/v1/recipes_controller.rb:7:in `results'
+Started GET "/api/v1/recipes/Avocado%20Bacon" for 127.0.0.1 at 2018-06-21 19:13:57 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Avocado Bacon"}
+Started GET "/api/v1/recipes/avocado%20bacon" for 127.0.0.1 at 2018-06-21 19:14:38 -0400
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.43ms)
+Completed 200 OK in 40480ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"avocado bacon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.74ms)
+Completed 200 OK in 2864ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/Avocado%20Bacon" for 127.0.0.1 at 2018-06-21 19:18:54 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Avocado Bacon"}
+Started GET "/api/v1/recipes/Avocado%20Bacon" for 127.0.0.1 at 2018-06-21 19:23:50 -0400
+Processing by Api::V1::RecipesController#results as HTML
+  Parameters: {"q"=>"Avocado Bacon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.79ms)
+Completed 200 OK in 298456ms (Views: 2369.3ms | ActiveRecord: 0.0ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.24ms)
+Completed 200 OK in 2265ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/Avocado%20Bacon" for 127.0.0.1 at 2018-06-21 19:25:02 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MikeMyung/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::RecipesController#results as */*
+  Parameters: {"q"=>"Avocado Bacon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (12.86ms)
+Completed 200 OK in 14873ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
