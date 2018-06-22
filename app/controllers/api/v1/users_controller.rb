@@ -1,4 +1,7 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :loginRequired, only: [:user_ingredients]
+  before_action :userMatch, only: [:user_ingredients]
+  
   def index
     @users = User.all
     render json: @users
@@ -7,6 +10,8 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.new
 
+    @user.name = params[:name]
+    @user.email = params[:email]
     @user.username = params[:username]
     @user.password = params[:password]
 
@@ -30,7 +35,11 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def user_ingredients
-    @user = User.find(params[:user_id])
-    render json: @user.ingredients
+    render json: @user.snacks
+  end
+
+  private
+  def user_params
+    # params.require(:user).permit(:username, :password, :password_confirmation)
   end
 end
